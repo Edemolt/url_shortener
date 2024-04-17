@@ -7,7 +7,7 @@ const app = express();
 app.use( express.json() );
 
 const url_route = require('./routes/url');
-const { connect_mongoose } = require('./connect');
+const { connect_mongoose } = require('./routes/connect');
 
 
 connect_mongoose('mongodb://localhost:27017/short-url').then( () => (console.log("Connected to mongodb 😁")));
