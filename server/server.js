@@ -2,8 +2,10 @@ const express = require('express');
 const shortId = require('shortid');
 const PORT = 8000;
 const URL = require('./models/url');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use( express.json() );
 
 const url_route = require('./routes/url');
